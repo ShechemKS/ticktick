@@ -42,4 +42,10 @@ jobs:
           pip install -r requirements.txt
 
     - name: execute py script # run main.py
-      run: python createTask.py ${{ github.event.inputs.name }} ${{ github.event.inputs.date }}
+      run: python createTask.py 
+      env:
+        INPUT_NAME: ${{ github.event.inputs.name }}
+        INPUT_DATE: ${{ github.event.inputs.date }}
+        TICKTICK_ID: ${{secrets.TICKTICK_ID}}
+        TICKTICK_PASSWORD: ${{secrets.TICKTICK_PASSWORD}}
+        TICKTICK_SECRET: ${{secrets.TICKTICK_SECRET}}
