@@ -1,1 +1,1 @@
-ticktick-py=2.0.3
+ticktick-py==2.0.3
