@@ -42,4 +42,4 @@ jobs:
           pip install -r requirements.txt
 
     - name: execute py script # run main.py
-      run: python createTask.py
+      run: python createTask.py ${{ github.event.inputs.name }} ${{ github.event.inputs.date }}
